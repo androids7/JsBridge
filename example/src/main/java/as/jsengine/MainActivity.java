@@ -53,11 +53,11 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	ValueCallback<Uri[]> mUploadMessageArray;
 
-    static class Location {
+    public static class Location {
         String address;
     }
 
-    static class User {
+    public static class User {
         String name;
         Location location;
         String testStr;
@@ -204,6 +204,8 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 	
 
+		//webView.loadUrl("file:///storage/emulated/0/XL-Html/Project/56900089/demo.html");
+		
 		
 		webView.loadUrl("file:///sdcard/1/demo.html");
 		
@@ -269,6 +271,7 @@ public class MainActivity extends Activity implements OnClickListener {
 					@Override
 					public void onCallBack(String data) {
 
+						
 					}
 				});
 			

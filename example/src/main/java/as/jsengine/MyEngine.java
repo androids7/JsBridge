@@ -6,7 +6,8 @@ import android.graphics.*;
 import com.google.gson.*;
 import org.json.*;
 import android.widget.*;
-
+import as.jsengine.MainActivity.User;
+import as.jsengine.MainActivity.Location;
 public class MyEngine
 {
 	MainView view;
@@ -81,6 +82,23 @@ public class MyEngine
 
 			});
 			
+			
+			
+			
+		User user = new User();
+		Location location = new Location();
+		location.address = "SDU";
+		user.location = location;
+		user.name = "大头鬼";
+
+		web.callHandler("functionInJs", new Gson().toJson(user), new CallBackFunction() {
+				@Override
+				public void onCallBack(String data) {
+
+					Toast.makeText(thiz,data,0).show();
+
+				}
+			});
 			
 			
 			/*
