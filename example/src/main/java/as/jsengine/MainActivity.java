@@ -46,6 +46,8 @@ public class MainActivity extends Activity implements OnClickListener {
 	BridgeWebView webView;
 
 	Button button;
+	
+	MyEngine eng;
 
 	int RESULT_CODE = 0;
 
@@ -210,7 +212,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		webView.loadUrl("file:///sdcard/1/demo.html");
 		
 		
-		MyEngine eng=new MyEngine(this,webView,main);
+		 eng=new MyEngine(this,webView,main);
 		eng.initregister();
 		
 		
