@@ -131,29 +131,14 @@ public class MainView extends SurfaceView implements Callback
 
 
 				//只要开关是开的就一直执行
+				/*
 				while(thread_sp){
 
-					Canvas canvas=holder.lockCanvas();
-
-					//如果能获取到屏幕句柄才操作
-					if(canvas!=null){
-
-						/**这里进行绘制操作*/
-
-						canvas.drawBitmap(cvs_cache,dst,src,null);
-
-
-						/***************/
-
-
-						//释放屏幕句柄
-						holder.unlockCanvasAndPost(canvas);
-
-					}
-
+					
 
 
 				}
+				*/
 			}
 		};
 		
@@ -209,6 +194,32 @@ public class MainView extends SurfaceView implements Callback
 	}
 
 	public MotionEvent event;
+	
+	
+	
+	public void ref(){
+		
+		
+		
+		Canvas canvas=holder.lockCanvas();
+
+		//如果能获取到屏幕句柄才操作
+		if(canvas!=null){
+
+			/**这里进行绘制操作*/
+
+			canvas.drawBitmap(cvs_cache,dst,src,null);
+
+
+			/***************/
+
+
+			//释放屏幕句柄
+			holder.unlockCanvasAndPost(canvas);
+
+		}
+		
+	}
 	
 	
 	@Override

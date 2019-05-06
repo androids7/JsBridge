@@ -89,6 +89,22 @@ public class MyEngine
 			});
 			
 			
+		web.registerHandler("refScr", new BridgeHandler() {
+
+				@Override
+				public void handler(String data, CallBackFunction function) {
+					//	Log.i( "MyEngine","handler = submitFromWeb, data from web = " + data);
+
+					
+				    view.ref();
+
+					function.onCallBack(null);
+				}
+
+			});
+			
+			
+			
 			web.registerHandler("drawText",new BridgeHandler(){
 			
 				@Override
@@ -259,7 +275,7 @@ public class MyEngine
 
 					view.paper.drawBitmap(bmpres[imglocation],x,y,null);
 
-					Toast.makeText(thiz,result,0).show();
+				//	Toast.makeText(thiz,result,0).show();
 					function.onCallBack(result+"<br>");
 
 				}});
