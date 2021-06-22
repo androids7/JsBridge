@@ -1,4 +1,7 @@
 #JsBridge
+和JsGameEngine网页文件搭配使用。实现了js调用本地安卓api进行SurfaceView操作
+可以画图，花文字等等
+
 
 -----
 
